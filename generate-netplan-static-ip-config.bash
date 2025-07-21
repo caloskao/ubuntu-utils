@@ -50,4 +50,8 @@ network:
           via: $gateway
 EOF
 
+# Change config file permissions
+sudo chown root:root /etc/netplan/01-static-ip.yaml
+sudo chmod 600 /etc/netplan/01-static-ip.yaml
+
 echo "Please verify the generated config. If correct, run 'sudo netplan try' to test and apply it."
